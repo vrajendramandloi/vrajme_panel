@@ -5,15 +5,13 @@ class CircleAlarmButton extends StatelessWidget {
   final Function()? onPressed;
   final double iconSize;
   final Color iconColor;
-  const CircleAlarmButton({Key? key, this.onPressed, this.iconSize = 20, this.iconColor = Colors.red}) : super(key: key);
+  const CircleAlarmButton({super.key, this.onPressed, this.iconSize = 20, this.iconColor = Colors.red});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
-      child: Container(
-        child: Icon(Entypo.bell,  color: iconColor, size: iconSize,),
-      )
+      child: Icon(Entypo.bell,  color: iconColor, size: iconSize,)
     );
   }
 }

@@ -2,6 +2,7 @@ name: vrajme_panel
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+  url: https://github.com/vrajendramandloi/vrajme_panel
 
 environment:
   sdk: ^3.5.3
