@@ -1,8 +1,9 @@
 name: vrajme_panel
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
-  url: https://github.com/vrajendramandloi/vrajme_panel
+description: "vrajme_panel for use of vrajme.co.in. apps only"
+version: 0.0.2
+homepage: https://github.com/vrajendramandloi/vrajme_panel
+repository: https://github.com/vrajendramandloi/vrajme_panel
+#  url: https://github.com/vrajendramandloi/vrajme_panel
 
 environment:
   sdk: ^3.5.3

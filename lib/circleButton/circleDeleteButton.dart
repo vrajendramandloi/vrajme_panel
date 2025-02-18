@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_font_icons/flutter_font_icons.dart'; // Import for Entypo
 
-class CircleAlarmButton extends StatelessWidget {
-  const CircleAlarmButton({
+class CircleDeleteButton extends StatelessWidget {
+  const CircleDeleteButton({
     super.key,
     this.onPressed,
-    this.radius = 25.0,  // Default radius. Adjust as needed
+    this.radius = 25.0,
     this.iconColor = Colors.white,
     this.backgroundColor,
-    this.padding = 5.0, // Default padding
+    this.padding = 5.0,
+    this.isEnabled = true,
   });
 
   final VoidCallback? onPressed;
@@ -16,25 +16,32 @@ class CircleAlarmButton extends StatelessWidget {
   final Color iconColor;
   final Color? backgroundColor;
   final double padding;
-
+  final bool isEnabled;
 
   @override
   Widget build(BuildContext context) {
+    final calculatedBackgroundColor = isEnabled
+        ? backgroundColor
+        : Colors.grey;
+
+    final calculatedIconColor = isEnabled
+        ? iconColor
+        : Colors.grey[400];
+
     return SizedBox(
       width: 2 * (radius + padding),
       height: 2 * (radius + padding),
       child: ElevatedButton(
-        onPressed: onPressed,
+        onPressed: isEnabled ? onPressed : null,
         style: ElevatedButton.styleFrom(
           shape: const CircleBorder(),
           padding: EdgeInsets.all(padding),
-          backgroundColor: backgroundColor,
-          fixedSize: Size(2*radius + 2*padding, 2*radius + 2*padding) // Set fixed size here
+          backgroundColor: calculatedBackgroundColor,
         ),
         child: Icon(
-          Entypo.bell, // Using Entypo bell icon
+          Icons.delete,  // Delete icon
           size: radius,
-          color: iconColor,
+          color: calculatedIconColor,
         ),
       ),
     );

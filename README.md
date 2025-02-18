@@ -15,24 +15,32 @@ TODO: Vrajme Panel is a package library to be used in easing app development.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Changelog
 
-## Getting started
+### Features
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+* **New Circular Buttons:** Added a set of consistent and customizable circular button widgets:
+    * `CircleAlarmButton`: Circular button with an alarm icon (Entypo.bell). Supports enabling/disabling.
+    * `CircleCameraButton`: Circular button with a camera icon. Supports enabling/disabling.
+    * `CircleCancelButton`: Circular button with a cancel icon. Supports enabling/disabling.
+    * `CircleDeleteButton`: Circular button with a delete icon. Supports enabling/disabling.
+    * `CircleEditButton`: Circular button with an edit icon. Supports enabling/disabling.
+    * `CircleMinusButton`: Circular button with a minus icon. Supports enabling/disabling.
+    * `CirclePlusButton`: Circular button with a plus icon. Supports enabling/disabling.
+    * `CirclePinButton`: Circular button with a pin icon (Entypo.location_pin). Supports enabling/disabling.
 
-## Usage
+* **CircleIconTitle Widget:** Created a widget that displays a circular icon with a title text below it.  Supports dynamic sizing, optional title, and enabling/disabling.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+* **CircleImageTitleActions Widget:**  Created a more advanced widget that displays a circular image (or a default image/icon if no image is provided) with a title below and an optional cancel button on the top-right corner. Supports dynamic sizing, optional title and cancel button, enabling/disabling, and image masking for the disabled state.
 
-```dart
-const like = 'sample';
-```
 
-## Additional information
+### Improvements
+* **Refactoring:** Consolidated common code for circular buttons using helper functions for better maintainability.
+* **Consistent Styling:** Standardized styling and parameters across all circular button widgets for consistency.
+* **Proportional Sizing:** Improved sizing logic in `CircleIconTitle` and `CircleImageTitleActions` to ensure that the icon, circle, text, and padding scale proportionally with the widget's size.
+* **Conditional Title Display:** Added conditional logic to `CircleImageTitleActions` to hide the title if the provided text is empty, also adjusting the widget's height accordingly.
+* **Disabling Logic Enhancement:** Refined disabling logic to properly handle null callbacks and improve the visual representation of the disabled state using grayscale overlays.
+* **Null Safety:** Improved null safety checks throughout the widgets to handle optional parameters and prevent runtime errors.
+* **Aspect Ratio:** implemented 3:4 Aspect ratio in CircleImageTitleActions Widget.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+
