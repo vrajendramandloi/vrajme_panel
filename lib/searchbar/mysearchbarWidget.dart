@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatelessWidget {
+class MySearchBarWidget extends StatelessWidget {
   final double height;
   final ValueChanged<String>? onTypeAction;
   final String? hintText;
   final TextEditingController? controller;
 
-  const SearchBar({
+  const MySearchBarWidget({
     Key? key,
     this.height = 48.0, // Default height
     this.onTypeAction,
