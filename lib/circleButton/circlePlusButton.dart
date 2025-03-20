@@ -40,6 +40,8 @@ class CirclePlusButton extends StatelessWidget {
           shape: const CircleBorder(),
           padding: EdgeInsets.all(padding),
           backgroundColor: calculatedBackgroundColor,
+          fixedSize: Size(2 * radius + 2 * padding,
+              2 * radius + 2 * padding) // Set fixed size here
         ),
         child: Icon(
           Icons.add,

@@ -28,6 +28,7 @@ class CirclePinButton extends StatelessWidget {
           shape: const CircleBorder(),
           padding: EdgeInsets.all(padding),
           backgroundColor: backgroundColor,
+          fixedSize: Size(2*radius + 2*padding, 2*radius + 2*padding) // Set fixed size here
         ),
         child: Icon(
           Entypo.location_pin,  // Pin icon (using Entypo)
