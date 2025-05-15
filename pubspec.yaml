@@ -1,6 +1,6 @@
 name: vrajme_panel
 description: "vrajme_panel for use of vrajme.co.in. apps only"
-version: 0.0.2
+version: 0.0.4
 homepage: https://github.com/vrajendramandloi/vrajme_panel
 repository: https://github.com/vrajendramandloi/vrajme_panel
 #  url: https://github.com/vrajendramandloi/vrajme_panel
@@ -14,6 +14,16 @@ dependencies:
     sdk: flutter
   image_picker: ^0.8.4+5
   flutter_font_icons: ^2.2.7
+  cupertino_icons: ^1.0.8
+  logging: ^1.3.0
+  file_picker: ^10.1.7
+  equatable: ^2.0.7
+  path_provider: ^2.1.5
+  animated_text_kit: ^4.2.3
+  permission_handler: ^12.0.0+1
+  device_info_plus: ^11.3.3
+  shared_preferences: ^2.5.3
+  http: ^1.4.0
 
 dev_dependencies:
   flutter_test:
