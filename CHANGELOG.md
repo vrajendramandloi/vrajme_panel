@@ -1,6 +1,7 @@
-## 0.0.2
+## 0.0.4
 
 ## Changelog
+have updated  following depedency for common use in all projects and single place of maintenance
 
 ### Features
 
