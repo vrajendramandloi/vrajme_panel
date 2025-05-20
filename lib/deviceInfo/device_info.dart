@@ -2,7 +2,7 @@ import 'dart:collection';
 import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:vrajme_panel/deviceInfo/deviceModel.dart';
+import 'package:vrajme_panel/deviceInfo/device_model.dart';
 
 class DeviceInfo {
   final deviceInfoPlugin = DeviceInfoPlugin();

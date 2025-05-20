@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:permission_handler/permission_handler.dart';
-import 'package:vrajme_panel/deviceInfo/deviceInfo.dart';
+import 'package:vrajme_panel/deviceInfo/device_info.dart';
 
 class PermisssionsUtil {
   PermisssionsUtil._privateConstructor();
