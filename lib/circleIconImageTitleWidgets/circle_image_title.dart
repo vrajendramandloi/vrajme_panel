@@ -74,7 +74,7 @@ class CircleImageTitle extends StatelessWidget {
                           if (!isEnabled) // Only show gray overlay if disabled
                             CircleAvatar(  // Gray overlay avatar
                               radius: radius - padding,
-                              backgroundColor: Colors.grey.withOpacity(0.7), // Adjust opacity as needed
+                              backgroundColor: const Color.fromRGBO(158, 158, 158, 0.7), // Adjust opacity as needed
                             ),
                         ],
                       )

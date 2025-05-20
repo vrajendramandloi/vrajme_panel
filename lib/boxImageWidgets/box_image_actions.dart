@@ -74,7 +74,7 @@ class BoxImageActions extends StatelessWidget {
                                 width: width - (2 * padding),
                                 height: width - (2 * padding),
                                 decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.7),
+                                  color: const Color.fromRGBO(158, 158, 158, 0.7),
                                   borderRadius: BorderRadius.circular(borderRadius),
                                 ),
                               ),

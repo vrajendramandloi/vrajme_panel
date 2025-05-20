@@ -57,7 +57,6 @@ class DeviceDetailsModel {
     );
   }
 
-  @override
   List<Object?> get props => [os, brand, device, model, lastInstalledOn, versionRelease];
   bool hasSameCoreDetails(DeviceDetailsModel other) {
     return os == other.os &&
