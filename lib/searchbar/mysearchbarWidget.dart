@@ -6,11 +6,11 @@ class MySearchBarWidget extends StatefulWidget {
   final String? hintText;
 
   const MySearchBarWidget({
-    Key? key,
+    super.key,
     this.height = 48.0, // Default height
     this.onTypeAction,
     this.hintText = "Search...", // Default hint text
-  }) : super(key: key);
+  });
 
   @override
   State<MySearchBarWidget> createState() => _MySearchBarWidgetState();
