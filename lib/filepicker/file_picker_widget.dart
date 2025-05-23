@@ -19,29 +19,20 @@ class FilePickerWidget extends StatelessWidget {
     return InkWell( // Or ElevatedButton, GestureDetector, etc.
       onTap: () => _showFilePickerBottomSheet(context, onFilePicked, onImagePicked),
       child: Container(
-        padding: const EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: Colors.blueAccent,
-          borderRadius: BorderRadius.circular(12.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, 3),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                color: Colors.grey.shade200
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text("Select and Upload Files ..!  "),
+                  Icon(Icons.cloud_upload_rounded, color: Colors.blue,)
+                ],
+              ),
             ),
-          ],
-        ),
-        child: Text(
-          buttonText,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18.0,
-            fontWeight: FontWeight.bold,
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ),
     );
   }
 }
@@ -114,16 +105,6 @@ void _showFilePickerBottomSheet(
                   type: FileType.custom,
                   allowedExtensions: ['pdf', 'doc', 'docx', 'txt'], // Customize as needed
                 );
-                onFilePicked(result); // Pass the picked file result
-              },
-            ),
-            _buildOptionTile(
-              context,
-              icon: Icons.folder,
-              title: 'Any File',
-              onTap: () async {
-                Navigator.pop(bc); // Close the bottom sheet
-                FilePickerResult? result = await FilePicker.platform.pickFiles();
                 onFilePicked(result); // Pass the picked file result
               },
             ),
