@@ -16,7 +16,7 @@ class FilePickerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell( // Or ElevatedButton, GestureDetector, etc.
+    return InkWell(
       onTap: () => _showFilePickerBottomSheet(context, onFilePicked, onImagePicked),
       child: Container(
               decoration: BoxDecoration(
@@ -37,7 +37,6 @@ class FilePickerWidget extends StatelessWidget {
   }
 }
 
-// --- 2. _showFilePickerBottomSheet Function ---
 void _showFilePickerBottomSheet(
   BuildContext context,
   Function(FilePickerResult?) onFilePicked,
@@ -49,9 +48,9 @@ void _showFilePickerBottomSheet(
       borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
     ),
     builder: (BuildContext bc) {
-      return SafeArea( // Ensures content is not obscured by system UI
+      return SafeArea(
         child: Column(
-          mainAxisSize: MainAxisSize.min, // Make column only as tall as its children
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -61,27 +60,28 @@ void _showFilePickerBottomSheet(
               ),
             ),
             const Divider(),
-            // --- 3. Bottom Sheet Content (Options) ---
             _buildOptionTile(
               context,
               icon: Icons.image,
               title: 'Image',
               onTap: () async {
-                Navigator.pop(bc); // Close the bottom sheet
+                Navigator.pop(bc);
                 final ImagePicker picker = ImagePicker();
                 final XFile? image = await picker.pickImage(source: ImageSource.gallery);
-                onImagePicked(image); // Pass the picked image
-              },
+                onImagePicked(image);
+              }
             ),
             _buildOptionTile(
               context,
               icon: Icons.camera_alt,
               title: 'Take Photo',
               onTap: () async {
-                Navigator.pop(bc); // Close the bottom sheet
+                Navigator.pop(bc);
                 final ImagePicker picker = ImagePicker();
-                final XFile? image = await picker.pickImage(source: ImageSource.camera);
-                onImagePicked(image); // Pass the picked image
+                final XFile? image = await picker.pickImage(
+                  source: ImageSource.camera
+                );
+                onImagePicked(image);
               },
             ),
             _buildOptionTile(
@@ -89,10 +89,10 @@ void _showFilePickerBottomSheet(
               icon: Icons.video_library,
               title: 'Video',
               onTap: () async {
-                Navigator.pop(bc); // Close the bottom sheet
+                Navigator.pop(bc);
                 final ImagePicker picker = ImagePicker();
-                final XFile? video = await picker.pickVideo(source: ImageSource.gallery);
-                onImagePicked(video); // image_picker also handles videos
+                final XFile? video = await picker.pickVideo(source: ImageSource.gallery, );
+                onImagePicked(video);
               },
             ),
             _buildOptionTile(
@@ -100,15 +100,16 @@ void _showFilePickerBottomSheet(
               icon: Icons.insert_drive_file,
               title: 'Document',
               onTap: () async {
-                Navigator.pop(bc); // Close the bottom sheet
+                Navigator.pop(bc);
                 FilePickerResult? result = await FilePicker.platform.pickFiles(
+                  allowMultiple: true,
                   type: FileType.custom,
-                  allowedExtensions: ['pdf', 'doc', 'docx', 'txt'], // Customize as needed
+                  allowedExtensions: ['pdf', 'doc', 'docx', 'txt'],
                 );
-                onFilePicked(result); // Pass the picked file result
+                onFilePicked(result);
               },
             ),
-            const SizedBox(height: 16.0), // Spacing at the bottom
+            const SizedBox(height: 16.0),
           ],
         ),
       );
@@ -116,7 +117,6 @@ void _showFilePickerBottomSheet(
   );
 }
 
-// Helper function to build consistent option tiles
 Widget _buildOptionTile(BuildContext context, {
   required IconData icon,
   required String title,
