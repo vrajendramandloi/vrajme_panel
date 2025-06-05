@@ -6,10 +6,10 @@ class FilesGridView extends StatelessWidget {
   final Function(dynamic) onFileTap;
 
   const FilesGridView({
-    Key? key,
+    super.key,
     required this.files,
     required this.onFileTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

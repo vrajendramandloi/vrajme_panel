@@ -7,10 +7,10 @@ class FileDisplayTile extends StatelessWidget {
   final VoidCallback? onDelete; // Optional callback for a delete button
 
   const FileDisplayTile({
-    Key? key,
+    super.key,
     required this.file,
     this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
