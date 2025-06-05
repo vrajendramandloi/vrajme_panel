@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vrajme_panel/files/fileTile/grid_file_tile.dart';
+import 'package:vrajme_panel/files/grid/grid_file_tile.dart';
 
 class FilesGridView extends StatelessWidget {
   final List<dynamic> files; // Can be XFile or PlatformFile
