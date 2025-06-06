@@ -24,6 +24,8 @@ class FileListViewer extends StatelessWidget {
     }
 
     return ListView.builder(
+      shrinkWrap: true, // Make ListView take only the space it needs
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: files.length,
       itemBuilder: (context, index) {
         final file = files[index];

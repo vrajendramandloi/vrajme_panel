@@ -14,6 +14,8 @@ class FilesGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      shrinkWrap: true, // Make ListView take only the space it needs
+      physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3, // Adjust as needed
         crossAxisSpacing: 8.0,
