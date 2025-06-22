@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CircleImageTitleLocal extends StatelessWidget {
-  const CircleImageTitleLocal({
+class CircleImageTitle extends StatelessWidget {
+  const CircleImageTitle({
     super.key,
     this.image,
     this.defaultImage,
